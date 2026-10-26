@@ -1,10 +1,15 @@
 const cors = require('cors');
 const express = require('express');
+const authRoutes = require('./routes/auth.routes');
+const productosRoutes = require('./routes/productos.routes');
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
+
+app.use('/api/auth', authRoutes);
+app.use('/api/productos', productosRoutes);
 
 app.get('/api/health', (req, res) => {
   res.json({
