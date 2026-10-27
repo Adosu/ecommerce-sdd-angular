@@ -8,7 +8,7 @@ jest.mock('bcrypt', () => ({
   compare: jest.fn(),
 }));
 
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const request = require('supertest');
 const app = require('../src/app');
