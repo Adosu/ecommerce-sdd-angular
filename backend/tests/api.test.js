@@ -3,7 +3,7 @@ jest.mock('../src/config/db', () => ({
   connect: jest.fn(),
 }));
 
-jest.mock('bcrypt', () => ({
+jest.mock('bcryptjs', () => ({
   hash: jest.fn(),
   compare: jest.fn(),
 }));
